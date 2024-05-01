@@ -1,0 +1,2 @@
+from pages.listar_entidades import page_entidades
+from pages.contatar_entidade import contatar_entidade
