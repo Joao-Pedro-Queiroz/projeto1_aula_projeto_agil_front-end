@@ -28,7 +28,7 @@ if st.session_state["actual_page"]=="Alunos":
     st.title("Alunos")
     st.divider()
     st.subheader ("Lista de alunos")
-
+   
 if st.session_state["actual_page"]=="Entidades":
     page_entidades()
 
