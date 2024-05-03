@@ -3,7 +3,7 @@ import requests
 
 st.set_page_config(page_title="Cadastro de entidade")
 
-def cadastra_entidade(nome, data_criacao, apresentacao, area_atuacao, id, password, presidente, email, vice_presidente, projetos,telefone):
+def cadastra_entidade(nome, data_criacao, apresentacao, area_atuacao, password, presidente, email, vice_presidente, projetos,telefone):
     api_endpoint = "https://projeto1-aula-projeto-agil-back-end-x13f.onrender.com/entidades"
     data = {}
 
@@ -12,7 +12,6 @@ def cadastra_entidade(nome, data_criacao, apresentacao, area_atuacao, id, passwo
         "data_criacao" : data_criacao,
         "apresentacao" : apresentacao,
         "area_atuacao" : area_atuacao,
-        "id" : id,
         "password" : password,
         "presidente" : presidente,
         "email" : email,
@@ -49,9 +48,6 @@ def main():
     st.write("## Area de Atuação")
     area_atuacao = st.text_input("Digite a area de atuação da entidade")
 
-    st.write("## id") 
-    id = st.text_input("Digite o id da entidade")
-
     st.write("## Senha")
     password = st.text_input("Digite a senha para criação de uma conta")
 
@@ -72,8 +68,8 @@ def main():
 
     st.write("##")
     if st.button("Cadastrar"): 
-        if nome and presidente and vice_presidente and email and telefone and area_atuacao and data_criacao and password and projetos and apresentacao and id:
-            response = cadastra_entidade(nome, data_criacao, apresentacao, area_atuacao, id, password, presidente, email, vice_presidente, projetos,telefone)
+        if nome and presidente and vice_presidente and email and telefone and area_atuacao and data_criacao and password and projetos and apresentacao:
+            response = cadastra_entidade(nome, data_criacao, apresentacao, area_atuacao, password, presidente, email, vice_presidente, projetos,telefone)
             # if response.status_code == 201:
             #     st.write("Entidade cadastrada com sucesso!")
             # else:

@@ -4,7 +4,7 @@ from rotas import get_usuarios
 
 def page_usuarios():
     #Header
-    st.title("Entidades")
+    st.title("Alunos")
     st.divider()
 
     data = get_usuarios()["usuarios"]
@@ -27,3 +27,5 @@ def page_usuarios():
                 if st.button("Contatar", key=item["nome"]):
                     st.session_state["usuarios"] = item
                     st.session_state["actual_page"] = "Contatar_alunoS"
+
+page_usuarios()

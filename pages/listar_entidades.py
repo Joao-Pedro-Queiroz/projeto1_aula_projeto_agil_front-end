@@ -27,3 +27,6 @@ def page_entidades():
                 if st.button("Contatar", key=item["apresentacao"]):
                     st.session_state["entidade"] = item
                     st.session_state["actual_page"] = "Contatar_Entidade"
+
+
+page_entidades()

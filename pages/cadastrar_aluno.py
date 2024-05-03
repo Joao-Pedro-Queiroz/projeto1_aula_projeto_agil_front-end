@@ -3,7 +3,7 @@ import requests
 
 st.set_page_config(page_title="Cadastrar aluno")
 
-def cadastra_aluno(nome, cpf,email, curso, data_nascimento, entidades, interesses, periodo,password, projetos,id):
+def cadastra_aluno(nome, cpf,email, curso, data_nascimento, entidades, interesses, periodo,password, projetos):
     api_endpoint = "https://projeto1-aula-projeto-agil-back-end-x13f.onrender.com/usuarios"
     data = {}
 
@@ -18,7 +18,6 @@ def cadastra_aluno(nome, cpf,email, curso, data_nascimento, entidades, interesse
         "periodo" : periodo,
         "password" : password,
         "projetos" : projetos,
-        "id": id,
 
     }
     print(data)
@@ -37,9 +36,6 @@ def main():
 
     st.write("## Nome")
     nome = st.text_input("Digite seu nome") 
-
-    st.write("## id")
-    id = st.text_input("Digite seu id") 
 
     st.write("## E-mail")
     email = st.text_input("Digite seu e-mail") 
@@ -71,7 +67,7 @@ def main():
     st.write("##")
     if st.button("Cadastrar"): 
         if nome and email and password and cpf and curso and data_nascimento and interesses and periodo:
-            response = cadastra_aluno(nome, cpf,email, curso, data_nascimento, entidades, interesses, periodo,password, projetos,id)
+            response = cadastra_aluno(nome, cpf,email, curso, data_nascimento, entidades, interesses, periodo,password, projetos)
             print(response)
             # if response.status_code == 201:
             #     st.success("Aluno cadastrado com sucesso!")
