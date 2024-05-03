@@ -28,6 +28,9 @@ if st.session_state["actual_page"]=="Home":
 ##ALUNOS
 if st.session_state["actual_page"]=="Alunos":
     #Header
+    st.title("Alunos")
+    st.divider()
+    st.subheader ("Lista de alunos")
     page_alunos()
 
 if st.session_state["actual_page"]=="Contatar_Aluno":
