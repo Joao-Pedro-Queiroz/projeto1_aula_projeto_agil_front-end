@@ -28,3 +28,4 @@ def page_alunos():
                     st.session_state["usuarios"] = item
                     st.session_state["actual_page"] = "Contatar_Aluno"
 
+page_alunos()
