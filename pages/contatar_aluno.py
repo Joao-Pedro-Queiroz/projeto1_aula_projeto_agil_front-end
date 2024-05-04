@@ -18,7 +18,7 @@ def contatar_aluno():
     mensagem = st.text_area("Digite a mensagem do email")
 
     if st.button("Enviar mensagem"):
-        url = "https://projeto1-aula-projeto-agil-back-end-x13f.onrender.com"
+        url = "https://projeto1-aula-projeto-agil-back-end-x13f.onrender.com/mensagens"
         payload = {
             "email_destinatário": email_destinatário,
             "email_remetente": email_remetente,
