@@ -29,9 +29,9 @@ credentials:
       name: isa
       password: isa
     joao:
-      email: joao@gmail.com
+      email: joao1234@gmail.com
       name: joao
-      password: joaozinho
+      password: '12345'
 preauthorized:
   emails:
   - melsby@gmail.com
