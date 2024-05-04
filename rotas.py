@@ -14,7 +14,7 @@ def get_entidade_by_apresentacao(apresentacao):
 def post_entidades(data):
     response = requests.post(f"{BACK_URL}/entidades", data=data)
     return response.json()
-  
+
 ##ALUNOS
 def get_alunos():
     response = requests.get(f"{BACK_URL}/usuarios")

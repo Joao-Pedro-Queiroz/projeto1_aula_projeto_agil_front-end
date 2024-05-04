@@ -1,0 +1,37 @@
+cookie:
+  expiry_days: 30
+  key: random_signature_key
+  name: random_cookie_name
+credentials:
+  usernames:
+    Amigaozoao:
+      email: amigao@gmail.com
+      name: Amigaozoao
+      password: joaozinh0
+    Jupiter:
+      email: jupiter@gmail.com
+      name: Jupiter
+      password: amoaaninha
+    ana:
+      email: Ana@gmail.com
+      name: ana
+      password: Ana
+    claudio:
+      email: claudio@gmail.com
+      name: claudio
+      password: claudinho
+    insper data:
+      email: insperdata@gmail.com
+      name: insper data
+      password: dadinho
+    isa:
+      email: isabela2@gmail.com
+      name: isa
+      password: isa
+    joao:
+      email: joao@gmail.com
+      name: joao
+      password: joaozinho
+preauthorized:
+  emails:
+  - melsby@gmail.com
