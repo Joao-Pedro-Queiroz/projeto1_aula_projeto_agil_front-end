@@ -1,7 +1,5 @@
 import streamlit as st
-from rotas import get_usuarios
 from rotas import get_alunos
-
 
 def page_alunos():
     #Header
@@ -17,7 +15,11 @@ def page_alunos():
 
     # Exibir resultados
     if filtered_data:
-        col1, col2 = st.columns(2)
+        col1, col2 = st.columns(2, gap="medium")
+        
+        col1.subheader("Aluno")
+        col2.subheader("Contatar")
+        
         for item in filtered_data:
             with col1:
                 st.write(item['nome'])

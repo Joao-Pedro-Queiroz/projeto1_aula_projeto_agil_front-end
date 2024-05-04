@@ -1,9 +1,33 @@
 import streamlit as st 
 import requests
+import yaml
 
 st.set_page_config(page_title="Cadastrar aluno")
 
-def cadastra_aluno(nome, cpf,email, curso, data_nascimento, entidades, interesses, periodo,password, projetos):
+st.markdown("""
+        <style>
+            div.st-emotion-cache-79elbk {display: none;}
+        </style>
+    """, unsafe_allow_html=True)
+
+st.sidebar.image("logo_hub.png", width=250)
+
+def save_on_yml(data):
+    config = {}
+    with open("config.yaml", "r") as file:
+        config = yaml.safe_load(file)
+
+    config["credentials"]["usernames"][data["nome"]] = {
+        "email": data["email"],
+        "name": data["nome"],
+        "password": data["password"],
+    }
+    
+    with open("config.yaml", "w") as file:
+        yaml.dump(config, file, default_flow_style=False)
+
+
+def cadastra_aluno(nome, cpf,email, curso, data_nascimento, entidades, interesses, periodo, password, projetos):
     api_endpoint = "https://projeto1-aula-projeto-agil-back-end-x13f.onrender.com/usuarios"
     data = {}
 
@@ -24,8 +48,11 @@ def cadastra_aluno(nome, cpf,email, curso, data_nascimento, entidades, interesse
 
     try:
         response = requests.post(url=api_endpoint, json=data)
-        print(response.status_code)
-        print(response.json())
+        
+        save_on_yml(data)
+        
+        if response.status_code == 201:
+            st.switch_page("login.py")
     except Exception as e:
         print(e)
     return response, 201 
