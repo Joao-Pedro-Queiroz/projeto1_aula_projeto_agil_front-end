@@ -8,3 +8,5 @@ def contatar_entidade():
     for key in data["info_contato"].keys():
         contacts.append([key, data["info_contato"][key]])
     st.table(contacts)
+
+contatar_entidade()
