@@ -1,4 +1,5 @@
 import streamlit as st 
+import requests
 
 
 def contatar_aluno():
@@ -16,7 +17,19 @@ def contatar_aluno():
     assunto = st.text_input("Digite o assunto do email")
     mensagem = st.text_area("Digite a mensagem do email")
 
-    if st.button("Enviar menagem"):
+    if st.button("Enviar mensagem"):
+        url = "https://projeto1-aula-projeto-agil-back-end-x13f.onrender.com"
+        payload = {
+            "email_destinatário": email_destinatário,
+            "email_remetente": email_remetente,
+            "assunto": assunto,
+            "mensagem": mensagem
+        }
+        response = requests.post(url, json=payload)
+        if response.status_code == 200:
+            st.success("Mensagem enviada com sucesso.")
+        else:
+            st.error("Erro ao enviar mensagem.")
         
 
 contatar_aluno()
