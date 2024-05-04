@@ -3,7 +3,7 @@ import requests
 
 def fetch_messages(email):
     response = requests.get("https://projeto1-aula-projeto-agil-back-end-x13f.onrender.com/mensagens", params={'email': email})
-    return response.json()['entidades']
+    return response.json()['mensagens']
 
 def app():
     st.title("Mensagens")
