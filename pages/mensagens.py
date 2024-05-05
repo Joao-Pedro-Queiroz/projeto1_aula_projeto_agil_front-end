@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 def fetch_messages(email):
-    response = requests.get("https://projeto1-aula-projeto-agil-back-end-x13f.onrender.com/mensagens", params={'email': email})
+    response = requests.get(f"https://projeto1-aula-projeto-agil-back-end-x13f.onrender.com/mensagens?email={email}")
     return response.json()['mensagens']
 
 def app():
