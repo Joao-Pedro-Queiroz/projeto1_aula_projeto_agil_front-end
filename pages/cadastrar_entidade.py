@@ -96,12 +96,7 @@ def main():
     st.write("##")
     if st.button("Cadastrar"): 
         if nome and presidente and vice_presidente and email and telefone and area_atuacao and data_criacao and password and projetos and apresentacao:
-            response = cadastra_entidade(nome, data_criacao, apresentacao, area_atuacao, password, presidente, email, vice_presidente, projetos,telefone)
-            # if response.status_code == 201:
-            #     st.write("Entidade cadastrada com sucesso!")
-            # else:
-            #     st.write("Erro ao cadastrar entidade")
-        else:
+            cadastra_entidade(nome, data_criacao, apresentacao, area_atuacao, password, presidente, email, vice_presidente, projetos,telefone)
             st.write("Preencha todos os campos")
 
         

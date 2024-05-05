@@ -94,12 +94,7 @@ def main():
     st.write("##")
     if st.button("Cadastrar"): 
         if nome and email and password and cpf and curso and data_nascimento and interesses and periodo:
-            response = cadastra_aluno(nome, cpf,email, curso, data_nascimento, entidades, interesses, periodo,password, projetos)
-            print(response)
-            # if response.status_code == 201:
-            #     st.success("Aluno cadastrado com sucesso!")
-            # else:
-            #     st.error("Erro ao cadastrar o aluno")
+                cadastra_aluno(nome, cpf,email, curso, data_nascimento, entidades, interesses, periodo,password, projetos)
         else:
             st.error("Todos os campos são obrigatórios exceto entidades e projetos. Por favor preencha-os")
 

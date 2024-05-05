@@ -12,6 +12,10 @@ credentials:
       email: jupiter@gmail.com
       name: Jupiter
       password: amoaaninha
+    alberto:
+      email: albertinho@gmail.com
+      name: alberto
+      password: '1234'
     ana:
       email: Ana@gmail.com
       name: ana
