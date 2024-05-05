@@ -26,7 +26,7 @@ def contatar_entidade():
             "mensagem": mensagem
         }
         response = requests.post(url, json=payload)
-        if response.status_code == 200:
+        if response.status_code == 201:
             st.success("Mensagem enviada com sucesso.")
         else:
             st.error("Erro ao enviar mensagem.")
