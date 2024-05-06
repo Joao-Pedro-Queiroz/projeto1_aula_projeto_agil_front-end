@@ -8,6 +8,10 @@ credentials:
       email: amigao@gmail.com
       name: Amigaozoao
       password: joaozinh0
+    Enrico:
+      email: en@gmail.com
+      name: Enrico
+      password: '5055'
     Jupiter:
       email: jupiter@gmail.com
       name: Jupiter
@@ -36,10 +40,18 @@ credentials:
       email: joao1234@gmail.com
       name: joao
       password: '12345'
+    jp:
+      email: jp@gmail.com
+      name: jp
+      password: '5060'
     jpqv:
       email: jpqv@gmail.com
       name: jpqv
       password: '1415'
+    oi:
+      email: oi
+      name: oi
+      password: oi
 preauthorized:
   emails:
   - melsby@gmail.com
