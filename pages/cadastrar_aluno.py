@@ -95,6 +95,7 @@ def main():
     if st.button("Cadastrar"): 
         if nome and email and password and cpf and curso and data_nascimento and interesses and periodo:
                 cadastra_aluno(nome, cpf,email, curso, data_nascimento, entidades, interesses, periodo,password, projetos)
+                st.success("Aluno cadastrado com sucesso.")
         else:
             st.error("Todos os campos são obrigatórios exceto entidades e projetos. Por favor preencha-os")
 

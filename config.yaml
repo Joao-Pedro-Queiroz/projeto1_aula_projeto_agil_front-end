@@ -36,6 +36,10 @@ credentials:
       email: joao1234@gmail.com
       name: joao
       password: '12345'
+    jpqv:
+      email: jpqv@gmail.com
+      name: jpqv
+      password: '1415'
 preauthorized:
   emails:
   - melsby@gmail.com

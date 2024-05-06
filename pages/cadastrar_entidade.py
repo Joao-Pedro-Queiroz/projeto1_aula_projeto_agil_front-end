@@ -97,7 +97,9 @@ def main():
     if st.button("Cadastrar"): 
         if nome and presidente and vice_presidente and email and telefone and area_atuacao and data_criacao and password and projetos and apresentacao:
             cadastra_entidade(nome, data_criacao, apresentacao, area_atuacao, password, presidente, email, vice_presidente, projetos,telefone)
-            st.write("Preencha todos os campos")
+            st.success("Entidade cadastrado com sucesso.")
+        else:
+            st.error("Todos os campos são obrigatórios exceto entidades e projetos. Por favor preencha-os")
 
         
 if __name__ == "__main__":
