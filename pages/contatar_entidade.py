@@ -3,7 +3,7 @@ import requests
 
 
 def contatar_entidade():
-    data = st.session_state.get("entidades")
+    data = st.session_state.get("entidade")
 
     if not data:
         st.error("Nenhuma entidade selecionado.")
