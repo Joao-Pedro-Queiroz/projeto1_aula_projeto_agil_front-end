@@ -15,10 +15,12 @@ def app():
                 st.markdown(f"**Enviado para {msg['email_destinatário']}**:")
                 st.markdown(f":yellow[Assunto: {msg['assunto']}]")
                 st.markdown(f":yellow[Mensagem: {msg['mensagem']}]")
+                st.divider()
             elif msg['email_destinatário'] == user_email:
                 st.markdown(f"**Recebido de {msg['email_remetente']}**:")
                 st.markdown(f":yellow[Assunto: {msg['assunto']}]")
                 st.markdown(f":yellow[Mensagem: {msg['mensagem']}]")
+                st.divider()
 
 if __name__ == "__main__":
     app()
